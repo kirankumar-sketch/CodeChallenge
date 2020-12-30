@@ -40,7 +40,6 @@ public class FundTransferServiceTest {
     Account account = new Account(toId);
     this.accountsService.createAccount(account);
     try {
-    	Map<String,Account> accounts=this.accountsService.getAccounts();
     	this.fundTransfer=new FundTransfer("101", "Id-101");
     	BigDecimal transferAmount=new BigDecimal(100);
     	this.fundTransfer.setTransferAmount(transferAmount);
@@ -60,7 +59,6 @@ public class FundTransferServiceTest {
     account.setBalance(currentBalance);
     this.accountsService.createAccount(account);
     try {
-    	Map<String,Account> accounts=this.accountsService.getAccounts();
     	this.fundTransfer=new FundTransfer("Id-201", "201");
     	BigDecimal transferbalance=new BigDecimal(10);
     	this.fundTransfer.setTransferAmount(transferbalance);
@@ -84,7 +82,6 @@ public class FundTransferServiceTest {
     account.setBalance(currentBal);
     this.accountsService.createAccount(account1);
     try {
-    	Map<String,Account> accounts=this.accountsService.getAccounts();
     	this.fundTransfer=new FundTransfer("Id-998", "Id-999");
     	BigDecimal bd=new BigDecimal(-10);
     	this.fundTransfer.setTransferAmount(bd);
@@ -103,7 +100,6 @@ public class FundTransferServiceTest {
     account.setBalance(currentBalance);
     this.accountsService.createAccount(account);
     try {
-    	Map<String,Account> accounts=this.accountsService.getAccounts();
     	this.fundTransfer=new FundTransfer("Id-901", "Id-901");
     	BigDecimal bd=new BigDecimal(10);
     	this.fundTransfer.setTransferAmount(bd);
@@ -128,8 +124,6 @@ public class FundTransferServiceTest {
     this.accountsService.createAccount(accountFrom);
     
     try {
-    	
-    	Map<String,Account> accounts=this.accountsService.getAccounts();
     	this.fundTransfer=new FundTransfer("Id-501", "Id-502");
     	BigDecimal bd=new BigDecimal(1000);
     	this.fundTransfer.setTransferAmount(bd);
